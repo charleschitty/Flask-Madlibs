@@ -21,18 +21,19 @@
 
         <div class="dropdown">
           <form action = "/">
-          <button class="dropbtn">Dropdown</button>
-          <div class="dropdown-content">
 
             <!-- Look into HTML select instead of dropdown -->
             <!-- HTML select can change the action of the form submit -->
 
-
+            <label for="stories">Choose a story:</label>
+            <select name="stories" id="stories">
             {% for story in stories %}
-              <a href="/">{{ story }}</a>
+              <option value="{{story}}">{{story}}</option>
             {% endfor %}
+            </select>
+            <button type="submit">SUBMIT STORY</button>
 
-          </div>
+
           </form>
          </div>
 

@@ -19,7 +19,17 @@ def index():
     # return render_template("base.html", stories = stories)
 
     # Creates list ['noun', 'verb']
-    prompts = stories.silly_story.prompts
+
+    story = story.title
+
+    if title == silly_story:
+        prompts = stories.silly_story.prompts
+    elif title == excited_story:
+        prompts = stories.excited_story.prompts
+    else:
+        prompts = stories.horror_story.prompts
+
+
 
     return render_template("questions.html", prompts = prompts)
 
@@ -36,8 +46,8 @@ def get_madlibs():
 def get_templates():
     """Shows story templates to pick from"""
 
-    story_templates = [
-        stories.silly_story, stories.excited_story, stories.horror_story
-        ]
+    story_templates = [title for title in stories.stories]
+    print('This is story_templates', story_templates)
+    # return story_templates
 
-    return render_template("storytemplates.html", stories = story_templates)
+    return render_template("base.html", stories = story_templates)

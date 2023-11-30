@@ -18,9 +18,10 @@ class Story:
         'I love to eat a good mango.'
     """
 
-    def __init__(self, words, text):
+    def __init__(self, title, words, text):
         """Create story with words and template text."""
 
+        self.title = title
         self.prompts = words
         self.template = text
 
@@ -38,6 +39,7 @@ class Story:
 # Here's a story to get you started
 
 silly_story = Story(
+    "silly story",
     ["place", "noun", "verb", "adjective", "plural_noun"],
     """Once upon a time, in a long-ago {place}, there lived an exceptionally
        {adjective} {noun}. It loved to {verb} with {plural_noun}."""
@@ -47,16 +49,16 @@ silly_story = Story(
 # and everything should still work
 
 excited_story = Story(
+    "excited story",
     ["noun", "verb"],
     """OMG!! OMG!! I love to {verb} a {noun}!"""
 )
 
 horror_story = Story(
+    "horror story",
     ["place", "noun", "verb", "adjective", "plural_noun"],
     """In a spooky {place}, there once was a {noun} who {verb}
     into a {adjective} world. They didn't die, they met {plural_noun}."""
 )
 
-
-class Stories:
-
+stories = [silly_story.title, excited_story.title, horror_story.title]
