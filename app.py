@@ -24,11 +24,3 @@ def get_madlibs():
     text = silly_story.get_result_text(request.args)
 
     return render_template("results.html", story_text=text)
-
-
-
-# old comments for reference:
-# imports example story (ex: silly story instance)
-
-# Create a form where the inputs the user will make are on the prompts
-# taken from the silly story insance (ex:"noun")
