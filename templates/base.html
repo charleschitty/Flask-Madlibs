@@ -17,7 +17,26 @@
   <div class="row vh-100">
     <div class="mx-auto my-auto">
       <main class="col w-100">
-        {% block content %}{% endblock %}
+        {% block content %}
+
+        <div class="dropdown">
+          <form action = "/">
+          <button class="dropbtn">Dropdown</button>
+          <div class="dropdown-content">
+
+            <!-- Look into HTML select instead of dropdown -->
+            <!-- HTML select can change the action of the form submit -->
+
+
+            {% for story in stories %}
+              <a href="/">{{ story }}</a>
+            {% endfor %}
+
+          </div>
+          </form>
+         </div>
+
+        {% endblock %}
       </main>
     </div>
   </div>

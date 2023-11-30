@@ -56,3 +56,7 @@ horror_story = Story(
     """In a spooky {place}, there once was a {noun} who {verb}
     into a {adjective} world. They didn't die, they met {plural_noun}."""
 )
+
+
+class Stories:
+

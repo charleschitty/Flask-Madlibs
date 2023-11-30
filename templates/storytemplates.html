@@ -15,9 +15,11 @@
 <div class="dropdown">
   <button class="dropbtn">Dropdown</button>
   <div class="dropdown-content">
-    <a href="#">Silly Story</a>
-    <a href="#">Excited Story</a>
-    <a href="#">Horror Story</a>
+
+    {% for story in stories %}
+      <a href="#">{{ story }}</a>
+    {% endfor %}
+
   </div>
  </div>
 
