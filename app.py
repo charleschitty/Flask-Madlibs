@@ -21,7 +21,23 @@ def index():
 
     return html
 
-#imports example story (ex: silly story instance)
+@app.get("/results")
+def get_madlibs():
+    """Gets form results and return story madlib"""
 
-#Create a form where the inputs the user will make are on the prompts
-#taken from the silly story insance (ex:"noun")
+    prompts = silly_story.prompts
+    answers = {prompt:request.args[f"{prompt}"] for prompt in prompts}
+
+    print('This is prompts', prompts)
+
+    text = silly_story.get_result_text(answers)
+
+    return render_template("results.html", template=text)
+
+
+
+# old comments for reference:
+# imports example story (ex: silly story instance)
+
+# Create a form where the inputs the user will make are on the prompts
+# taken from the silly story insance (ex:"noun")
