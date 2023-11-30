@@ -50,3 +50,9 @@ excited_story = Story(
     ["noun", "verb"],
     """OMG!! OMG!! I love to {verb} a {noun}!"""
 )
+
+horror_story = Story(
+    ["place", "noun", "verb", "adjective", "plural_noun"],
+    """In a spooky {place}, there once was a {noun} who {verb}
+    into a {adjective} world. They didn't die, they met {plural_noun}."""
+)
